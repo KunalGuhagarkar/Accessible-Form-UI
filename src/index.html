@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Accessible Form UI</title>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <main>
+            <div class="form-container">
+                <form action="">
+                    <label for="fullName">Full Name</label>
+                    <input
+                        type="text"
+                        id="fullName"
+                        name="fullName"
+                        placeholder="What should we call you?"
+                        required
+                        aria-required="true"
+                    />
+                    <span
+                        class="error-message"
+                        id="fullname-error"
+                        aria-invalid="true"
+                        >Cannot Keep this field empty!</span
+                    >
+
+                    <label for="email">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="john.doe@example.com"
+                        required
+                        aria-required="true"
+                    />
+                    <span
+                        class="error-message"
+                        id="email-error"
+                        aria-invalid="true"
+                        >Enter a valid Email</span
+                    >
+
+                    <label for="password">Enter Password</label>
+                    <div class="password-container">
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="xxxxxx"
+                            required
+                            aria-required="true"
+                            aria-invalid="false"
+                            aria-describedby="password-error"
+                        />
+                        <button
+                            type="button"
+                            class="show-hide-btn"
+                            aria-controls="password"
+                            aria-label="Show password"
+                        >
+                            <img src="./images/eye-icon.svg" alt="eye-icon" />
+                        </button>
+                    </div>
+                    <span
+                        class="error-message"
+                        id="password-error"
+                        aria-invalid="true"
+                        >Enter a Password</span
+                    >
+
+                    <label for="confirmPassword">Confirm Password</label>
+                    <div class="password-container">
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            name="confirmPassword"
+                            placeholder="xxxxxx"
+                            required
+                            aria-required="true"
+                            aria-invalid="false"
+                            aria-describedby="password-error"
+                        />
+                        <button
+                            type="button"
+                            class="show-hide-btn"
+                            aria-controls="password"
+                            aria-label="Show password"
+                        >
+                            <img src="./images/eye-icon.svg" alt="eye-icon" />
+                        </button>
+                    </div>
+
+                    <button class="update-profile-btn" type="submit">
+                        Update Profile
+                    </button>
+                </form>
+            </div>
+
+            <div class="progress-container">
+                <div class="progress-tracker">
+                    <p>65%</p>
+                </div>
+
+                <p>Profile Completeness</p>
+
+                <div class="task-container">
+                    <div class="text-container">
+                        <p>Create Account</p>
+                        <p>Update Roadmap Progress</p>
+                        <p>Setup Public Profile</p>
+                        <p>Complete your first project</p>
+                        <p>Invite your friends</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

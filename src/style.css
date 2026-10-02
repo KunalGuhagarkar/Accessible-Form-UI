@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:
+        "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+    column-gap: 50px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 600px;
+    margin: 100px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 40px;
+}
+
+form > label {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+input {
+    height: 40px;
+    margin-bottom: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+input:focus {
+    border: 3px solid black;
+}
+
+input:user-invalid {
+    border: 2px solid red;
+}
+
+.error-message {
+    display: none;
+    color: red;
+    font-size: 1rem;
+}
+
+input:user-invalid ~ .error-message {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input::placeholder {
+    font-size: 1.2rem;
+}
+
+.password-container {
+    display: flex;
+}
+
+.password-container > input {
+    border-right: transparent;
+    border-radius: 5px 0px 0px 5px;
+    flex: 1;
+}
+
+input[type="password"]::-ms-reveal {
+    display: none !important;
+}
+
+.show-hide-btn {
+    background-color: transparent;
+    border: 2px solid black;
+    border-left: transparent;
+    border-radius: 0px 5px 5px 0px;
+    height: 40px;
+}
+
+.password-container > button > img {
+    width: 40px;
+    height: 30px;
+}
+
+.update-profile-btn {
+    background-color: black;
+    color: white;
+    margin-top: 20px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+
+.update-profile-btn:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+.progress-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 400px;
+    margin: 100px 0;
+    row-gap: 30px;
+}
+
+.progress-tracker {
+    margin-top: 50px;
+    height: 100px;
+    width: 100px;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        linear-gradient(#fff, #fff) padding-box,
+        conic-gradient(from 120deg, #333 0% 65%, lightgrey 65.5% 100%)
+            border-box;
+}
+
+.progress-tracker > p {
+    font-size: 2rem;
+}
+
+.progress-container > p {
+    font-size: 1.5rem;
+}
+
+.task-container {
+    background-color: lightgrey;
+    height: 300px;
+    width: 350px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    row-gap: 20px;
+    padding-top: 30px;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.text-container > p {
+    font-size: 1.2rem;
+}
+
+.text-container > p:nth-of-type(-n + 3){
+    color: rgb(114, 114, 114);
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+}
